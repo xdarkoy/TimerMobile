@@ -1,0 +1,48 @@
+{
+  "expo": {
+    "name": "TimerMobile",
+    "slug": "timer-mobile",
+    "version": "1.0.0",
+    "orientation": "landscape",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#1a1a2e"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.timer.mobile",
+      "infoPlist": {
+        "NFCReaderUsageDescription": "Diese App verwendet NFC zum Einlesen von Mitarbeiter-Karten für Check-in/Check-out.",
+        "UIRequiredDeviceCapabilities": ["nfc"]
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#1a1a2e"
+      },
+      "package": "com.timer.mobile",
+      "permissions": ["android.permission.NFC"]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-sqlite",
+        {
+          "enableFTS": true
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "timer-mobile"
+      }
+    }
+  }
+}
